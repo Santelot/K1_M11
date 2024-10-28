@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1-M11 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }     
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M11 - SCAMPER</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 2 'Code Squad' y saluda a los niños mientras muestras el equipo de Code Squad, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! Bienvenidos a una nueva misión. Hoy vamos a trabajar con la letra 'C' de SCAMPER, que significa Combinar. Vamos a ayudar a Beto, el alebrije, a juntar partes de diferentes animales para hacer algo especial. ¿Están listos para empezar?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile_scamper')">
+        <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+    </div>
+    <div id="baile_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños con estos pasos para aplicar SCAMPER al baile:
+                    <ul>
+                        <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                        <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                        <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                        <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                        <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                        <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                        <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                    </ul>
+                </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Síganme para que aprendamos a bailar al estilo SCAMPER. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es esta canción, para irnos ejercitando y que cada día sea más fácil.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento_problema')">
+        <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+        <div class="subtitle">Introduce el video de las artesanías con las que van a trabajar y explica el reto.</div>
+    </div>
+    <div id="planteamiento_problema" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 4 "Desafío de Innovación" e introduce el video de las artesanías con las que van a trabajar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy tenemos una misión muy especial: vamos a ayudar a Beto, un alebrije que quiere combinar partes de diferentes animales para hacer algo único y especial. Antes de empezar, veamos su historia y descubramos cómo podemos ayudarlo.</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 5 "Video Alebrijes" y al final has algunas preguntas para corroborar que haya quedado claro lo que quiere Beto.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, genios! Ya conocimos a Beto. Ahora, antes de ayudarlo, vamos a asegurarnos de que todos entendemos su desafío.<br>
+                                                        Primero, ¿alguien sabe en qué estado de México se hacen estos alebrijes? (Esperar respuestas). <br>
+                                                        ¡Correcto, en Oaxaca! ¿Y de qué material están hechos los alebrijes como Beto? (Esperar respuestas). <br>
+                                                        ¡Exacto, de madera! Ahora, ¿a quién vamos a ayudar en esta misión? (Esperar respuestas). <br>
+                                                        ¡Correcto, a Beto! ¿Y qué es lo que Beto quiere lograr? (Esperar respuestas). <br>
+                                                        ¡Así es, quiere combinar partes de diferentes animales! <br>
+                                                        ¿Listos para empezar con sus ideas de combinación?</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('introduccion_scamper')">
+        <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Explica cómo hacer preguntas de innovación con "Sustituir".</div>
+    </div>
+    <div id="introduccion_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 6 "C de Combinar" e introduce cómo se pueden juntar diferentes elementos para innovar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy vamos a aprender una herramienta especial que nos ayuda a hacer cambios increíbles: la 'C' de SCAMPER, que significa Combinar. Combinar quiere decir juntar cosas para crear algo nuevo. Por ejemplo, ¿qué pasaría si combinamos la cabeza de un león y las alas de un águila? ¡Vamos a ver cómo podemos usar esta idea para ayudar a Beto!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('metodologia_qtf')">
+        <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+    </div>
+    <div id="metodologia_qtf" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Paso 1 Metodología QTF" y presenta el estímulo para hacer preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Recuerdan de qué está hecho nuestro amigo Beto, el alebrije? ¡Exacto, de madera! ¿Y recuerdan partes de qué combina? Si! de Animales.  Hoy vamos a pensar en cómo podríamos combinar otras cosas en su diseño para hacerlo aún más especial. Usaremos una fórmula mágica para hacer preguntas y explorar diferentes ideas.</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Fórmula Preguntas" y explica cómo el CODE SQUAD cómo pueden hacerse preguntas para ayudar a Beto. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, es hora de aprender una fórmula mágica que nos ayudará a hacer cambios increíbles! Esta es la Fórmula de COMBINAR. Cada vez que queramos cambiar algo, podemos hacernos esta pregunta:
+¿Qué [otra cosa] podríamos combinar con [parte del alebrije] para hacerlo diferente? "Por ejemplo, ¿qué pasaría si agregamos un material suave en el diseño de Beto? ¡Vamos a ver qué más se nos ocurre!"</td>
+            </tr>
+<!-- Paso 3 -->
+<tr>
+    <td><strong>PASO 3 (3 minutos):</strong> Reproduce la Diapositiva 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas iniciales de combinación. Si hay bloqueo, sugiere que piensen en diferentes materiales o características humanas. Anota sus preguntas en el pizarrón.</td>
+    <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, genios! Ahora usaremos la fórmula de Combinar para crear preguntas que nos ayuden a diseñar algo único para Beto. Por ejemplo, ¿qué les parece combinar un material suave en sus alas? ¿O qué parte humana podríamos combinar en su diseño? ¡Vamos a escribir todas las ideas en el pizarrón para inspirarnos!</td>
+</tr>
+
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Reproduce la DIAPOSITIVA 10 "Mejorar preguntas" explica la manera en la que podemos mejorar las preguntas que ya hicimos. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hicieron preguntas geniales, pero ahora, vamos a hacerlas más detalladas. Para eso, necesitamos entender la diferencia entre una pregunta general y una pregunta específica.
+Una pregunta general es cuando preguntamos algo muy amplio, como: '¿Con qué material podríamos combinar la madera?', Pero una pregunta más específica sería: '¿Con qué material suave y colorido podríamos combinar la madera en las alas de Beto?' ¡Veamos cómo podemos mejorar cada pregunta para que beto sea más genial!"</td>
+            </tr>
+            <!-- Paso 5 -->
+            <tr>
+                <td><strong>PASO 5 (3 minutos):</strong> Reproduce la DIAPOSITIVA 11 "Ejemplo Pregunta Específica" da un ejemplo de pregunta específica y facilita el proceso para que los niños tomen las preguntas que ya hicieron y las vayan haciendo específicas. Ve agotando las preguntas una a una y anota las nuevas preguntas de los genios en el pizarrón. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a revisar una de nuestras preguntas. Esta dice: '¿Con qué material podríamos combinar la madera en el cuerpo de Beto?' ¿Podemos hacerla más específica? ¿Qué tal si preguntamos: '¿Con qué material ligero podríamos combinar la madera para darle un toque especial a las alas de Beto?' ¡Vamos a mejorar cada pregunta para hacer nuestras ideas aún más únicas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('prototipado_esferas')">
+        <div class="title">🖍️ Actividad 6: Prototipado en Papel de Alebrijes ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Aplica las preguntas formuladas en el diseño de la esfera.</div>
+    </div>
+    <div id="prototipado_esferas" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 12 "Innovando Alebrijes" y explica que aplicaremos las preguntas para crear un nuevo diseño de Beto.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios del CODE SQUAD, ahora vamos a poner en práctica las preguntas que hicimos para diseñar una nueva versión de nuestro amigo Beto y vamos a dibujarlo. ¡Usen toda su creatividad y combinen las ideas que crearon!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 13 "Entregar Materiales"  y distribuye los materiales. Asegúrate de que todos los niños tengan papel y colores para dibujar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen sus materiales, genios. Con estos, vamos a crear nuestro propio alebrije combinando todas las ideas que tuvimos. ¡Manos a la obra!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la Diapositiva 14 "Diseñar Alebrije" y guía a los niños a diseñar su alebrije paso a paso, usando las preguntas de combinación que formularon.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a empezar el diseño pensando en la primera pregunta: ¿qué materiales podríamos combinar para las alas? Dibujen su idea y luego pasemos a la siguiente parte del cuerpo. ¡Recuerden, cada parte puede ser única!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+        <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta la adición de tecnología al reto.</div>
+    </div>
+    <div id="presentacion_tecnologia" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 15 "Presentación de Tecnología" y explica la adición al reto. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Ahora que tenemos nuestras ideas de combinación, vamos a ver cómo una tecnología especial puede hacer que nuestros alebrijes sean aún más increíbles. Hoy veremos cómo podríamos agregar un motor pequeño para que una o muchas partes de Beto se muevan. ¿Se imaginan que las alas de Beto puedan batir o su cola se mueva?</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Reproduce la Diapositiva 16 "Video de Motores Pequeños" y al final facilita preguntas para comprobar que entendieron bien la tecnología.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿No es asombroso, genios? Ahora que vimos cómo funcionan los motores pequeños, repasemos algunos puntos importantes. ¿Qué necesitamos para que el motor funcione? (Esperar respuestas).<br>
+ ¡Así es, una fuente de energía como una batería! ¿Y qué hace el motor cuando recibe energía? ¡Exacto, se mueve!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Reproduce la Diapositiva 17 "Alebrijes con Motores" y muestra ejemplos de alebrijes que utilizan motores para darle vida a su diseño.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Miren estos alebrijes que han integrado motores pequeños en su diseño. ¿Ven cómo sus alas o colas parecen cobrar vida? ¡Podemos hacer lo mismo con nuestras ideas para Beto!</td>
+            </tr>
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la Diapositiva 18 "Integración de Tecnología" y guía a los niños para pensar cómo incorporar la tecnología en su propio diseño.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, imaginen cómo quedaría su alebrije si integran un motor pequeño. ¿Dónde les gustaría que tuviera movimiento? ¿En las alas, la cola o quizá la cabeza? ¡Dejen volar su imaginación y piensen en cómo esta tecnología puede dar vida a su diseño!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_esferas')">
+        <div class="title">🎨 Actividad 8: Presentación de Alebrijes ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Organiza la presentación de las esferas en grupos de 3.</div>
+    </div>
+    <div id="presentacion_esferas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la Diapositiva 19 "Presentación Alebrijes" y organiza a los niños en grupos de 3 para que presenten sus alebrijes al equipo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, es momento de mostrar sus increíbles alebrijes! Vamos a organizarnos en grupos de tres, y cada uno presentará su diseño. Expliquen cómo combinaron materiales o ideas en su alebrije y dónde les gustaría aplicar la tecnología de movimiento. ¡Escuchemos todas sus ideas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 9 -->
+<div id="activity-9" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_historia')">
+        <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+    </div>
+    <div id="conclusion_historia" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 20 'Conclusión y Cierre', felicita al CODE SQUAD por su trabajo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡CODE SQUAD, lo hicieron espectacular! Beto está impresionado con todas las combinaciones y el movimiento que imaginaron para él. Cada alebrije es único, y gracias a sus ideas, Beto es más especial que nunca. ¡Sigan así, genios, su creatividad no tiene límites! Nos vemos en la próxima misión."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+  
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
